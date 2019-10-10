@@ -14,13 +14,14 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertTrue;
 
 public class TimeServerResourceIT {
+
     private Client client;
     private WebTarget tut;
 
     @Before
     public void initClient() {
         this.client = ClientBuilder.newClient();
-        this.tut = this.client.target("http://localhost:8080/restprimer/rs/time");
+        this.tut = this.client.target("http://localhost:8080/restprimer/api/time");
     }
     @Test
     public void fetchTime() {
